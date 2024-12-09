@@ -1,0 +1,13 @@
+Hân :  
+đọc data : 11/12 
+scikit-learn : 12-17/12
+
+Khoa :
+tf, pytorch : 12-17/12
+
+18/12 : bắt đầu report 
+report : 18/12
+so sánh : 19/12
+còn lại report : 20-22/12
+
+thư viện ngoài : 
