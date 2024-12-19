@@ -1,0 +1,25 @@
+- Dữ liệu đầu vào : 
+  + 32 x 32 x 3 mỗi điểm ảnh [0, 255]
+  + data augmentation : enhance model prevent overfitting => mục đích : tạo ra nhiều biến thể của dữ liệu(tránh overfitting)
+  + chuẩn hóa về dạng [0, 1]
+  + onehot-encoding
+  + làm phẳng chuyển dữ liệu về 1D
+- Pytorch :
+  + Chuyển y(output) sang chỉ số lớp : [[0, 1, 0], [1,0,0]] => [1, 0] + loaddataset vào theo format pytorch
+  + 2 hidden layer (256, 128) => 10 lớp đầu ra : 
+    . Dùng hàm kích hoạt relu 
+    . output có dạng logits(chưa dùng softmax vì crossentropy ở pytorch đã tích hợp sẵn softmax)
+  + adam, crossentropy Loss
+  + shuffle dữ liệu : để gradient, thứ tự dữ liệu tốt sẽ ít phụ thuộc vào dữ liệu
+  + Flow(epoch = 200) : 
+    . split data to minibatch(128)
+      . reset gradient, 
+      . forward pass => output(logits)
+      . compute and update Loss
+      . backpropagation => update gradient => update weight
+  + Lưu ý :
+    . Bias: 
+      . Sử dụng add_one để thêm bias thì sẽ thêm thẳng giá trị bias vào vector của tập train : y = X' * W.T (X' = [X, 1])
+      . Sử dụng nn.Linear thì sẽ tự động tạo thêm 1 vector bias b : y = X * W.T + b
+    . '.to(device)' : để chuyển dữ liệu vào gpu
+    . cần kiểm tra xem pytorch đã nhận gpu hãy chưa : trả về device:0 là có

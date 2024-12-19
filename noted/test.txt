@@ -1,0 +1,88 @@
+Optimize : Adam
+Batch-normalized/ drop out(0,3 or 0.5) => batch-normalized
+
+Batch_size : 128
+Learning rate: 0.001 ; scheduler(0.1 : sau mỗi 10 epoch giảm 10 lần)
+
+Activation : Relu
+Early stopping(patient = 10) : nếu sau 10 lần cập nhật mà Loss vẫn k nhỏ hơn best Loss thì ngừng
+
+#######################################################################
+Neural in hidden layer: [512, 256, 128]
+Epoch 13/200, Train Loss: 0.4148, Validation Loss: 1.4444, Validation Accuracy: 56.60%
+No improvement for 6 epochs.
+Epoch 14/200, Train Loss: 0.3840, Validation Loss: 1.4739, Validation Accuracy: 56.43%
+No improvement for 7 epochs.
+Epoch 15/200, Train Loss: 0.3547, Validation Loss: 1.5565, Validation Accuracy: 55.63%
+No improvement for 8 epochs.
+Epoch 16/200, Train Loss: 0.3313, Validation Loss: 1.5826, Validation Accuracy: 55.52%
+No improvement for 9 epochs.
+Epoch 17/200, Train Loss: 0.3090, Validation Loss: 1.6049, Validation Accuracy: 55.53%
+No improvement for 10 epochs.
+Early stopping triggered.
+
+#######################################################################
+Neural in hidden layer: [256, 128]
+Epoch 17/200, Train Loss: 0.5549, Validation Loss: 1.4111, Validation Accuracy: 55.69%
+No improvement for 6 epochs.
+Epoch 18/200, Train Loss: 0.5378, Validation Loss: 1.4423, Validation Accuracy: 55.22%
+No improvement for 7 epochs.
+Epoch 19/200, Train Loss: 0.5240, Validation Loss: 1.4507, Validation Accuracy: 55.24%
+No improvement for 8 epochs.
+Epoch 20/200, Train Loss: 0.5101, Validation Loss: 1.4683, Validation Accuracy: 54.89%
+No improvement for 9 epochs.
+Epoch 21/200, Train Loss: 0.4820, Validation Loss: 1.4536, Validation Accuracy: 55.71%
+No improvement for 10 epochs.
+Early stopping triggered.
+
+#######################################################################
+Neural in hidden layer: [128, 128]
+Epoch 17/200, Train Loss: 0.7256, Validation Loss: 1.3921, Validation Accuracy: 54.38%
+No improvement for 6 epochs.
+Epoch 18/200, Train Loss: 0.7138, Validation Loss: 1.4134, Validation Accuracy: 54.16%
+No improvement for 7 epochs.
+Epoch 19/200, Train Loss: 0.7067, Validation Loss: 1.4010, Validation Accuracy: 54.49%
+No improvement for 8 epochs.
+Epoch 20/200, Train Loss: 0.6991, Validation Loss: 1.4169, Validation Accuracy: 54.67%
+No improvement for 9 epochs.
+Epoch 21/200, Train Loss: 0.6715, Validation Loss: 1.4040, Validation Accuracy: 54.68%
+No improvement for 10 epochs.
+Early stopping triggered.
+
+#######################################################################
+Neural in hidden layer: [1024, 512, 256, 128] => accuracy cao nhất 
+Epoch 12/200, Train Loss: 0.3961, Validation Loss: 1.4033, Validation Accuracy: 57.28%
+No improvement for 1 epochs.
+Epoch 13/200, Train Loss: 0.3488, Validation Loss: 1.4895, Validation Accuracy: 56.75%
+No improvement for 2 epochs.
+Epoch 14/200, Train Loss: 0.3113, Validation Loss: 1.5186, Validation Accuracy: 56.90%
+No improvement for 3 epochs.
+Epoch 15/200, Train Loss: 0.2767, Validation Loss: 1.5870, Validation Accuracy: 56.64%
+No improvement for 4 epochs.
+Epoch 16/200, Train Loss: 0.2448, Validation Loss: 1.6512, Validation Accuracy: 55.86%
+No improvement for 5 epochs.
+Epoch 17/200, Train Loss: 0.2129, Validation Loss: 1.7157, Validation Accuracy: 56.19%
+No improvement for 6 epochs.
+Epoch 18/200, Train Loss: 0.1911, Validation Loss: 1.7741, Validation Accuracy: 55.97%
+No improvement for 7 epochs.
+Epoch 19/200, Train Loss: 0.1675, Validation Loss: 1.8258, Validation Accuracy: 55.92%
+No improvement for 8 epochs.
+Epoch 20/200, Train Loss: 0.1456, Validation Loss: 1.9089, Validation Accuracy: 55.29%
+No improvement for 9 epochs.
+Epoch 21/200, Train Loss: 0.1146, Validation Loss: 1.8564, Validation Accuracy: 56.11%
+No improvement for 10 epochs.
+Early stopping triggered.
+
+#######################################################################
+Neural in hidden layer: [2048, 1024, 512, 256, 128] => tốn thời gian không cải thiện được nhiều
+Epoch 17/200, Train Loss: 0.2189, Validation Loss: 1.7629, Validation Accuracy: 56.08%
+No improvement for 6 epochs.
+Epoch 18/200, Train Loss: 0.1883, Validation Loss: 1.8037, Validation Accuracy: 56.52%
+No improvement for 7 epochs.
+Epoch 19/200, Train Loss: 0.1593, Validation Loss: 1.8938, Validation Accuracy: 56.39%
+No improvement for 8 epochs.
+Epoch 20/200, Train Loss: 0.1392, Validation Loss: 1.9214, Validation Accuracy: 56.84%
+No improvement for 9 epochs.
+Epoch 21/200, Train Loss: 0.0999, Validation Loss: 1.9163, Validation Accuracy: 56.66%
+No improvement for 10 epochs.
+Early stopping triggered.
